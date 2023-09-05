@@ -1,0 +1,13 @@
+{
+    "benchmarkId": "",
+    "code": {
+        "owner": "benchmark-admin",
+        "repo": "hello-world",
+        "branch": "",
+        "commit": ""
+    },
+    "difficulty": 0.0,
+    "link": "",
+    "public": true,
+    "title": "Test Hello World"
+}
