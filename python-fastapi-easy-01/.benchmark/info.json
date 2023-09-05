@@ -1,0 +1,13 @@
+{
+    "benchmarkId": "",
+    "code": {
+        "owner": "benchmark-admin",
+        "repo": "python-fastapi-easy-01",
+        "branch": "",
+        "commit": ""
+    },
+    "difficulty": 1.0,
+    "link": "",
+    "public": true,
+    "title": "[python][easy][fastapi] add /hello endpoint"
+}
