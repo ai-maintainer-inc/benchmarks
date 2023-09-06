@@ -13,3 +13,8 @@ Items should have the following properties:
 - name: string
 - created_at: datetime
 - updated_at: datetime
+
+Endpoints should return appropriate status codes:
+- 200 for POST
+- 200 for GET/PUT/DELETE
+- 404 for not found
