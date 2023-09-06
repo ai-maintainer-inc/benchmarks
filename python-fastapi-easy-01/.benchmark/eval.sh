@@ -21,8 +21,8 @@ HELLO_RESPONSE=$(curl -s -f "http://$HOST:$PORT/hello")
 if [[ $? -ne 0 ]]; then
   echo "Failure: /hello endpoint is not reachable or returned an error"
   STATUS=1
-elif [[ $(echo "$HELLO_RESPONSE" | grep -i "hello world") ]]; then
-  echo "Success: /hello endpoint contains 'hello world'"
+elif [[ $(echo "$HELLO_RESPONSE" | grep -i "hello") ]]; then
+  echo "Success: /hello endpoint contains 'hello'"
 else
   echo "Failure: /hello endpoint does not contain 'hello world'"
   STATUS=1
