@@ -10,13 +10,13 @@ FROM python:3.11-slim
 WORKDIR /usr/src/app
 
 # Copy the app content
-COPY ../app ./app
+COPY app ./app
 
 # Copy the .benchmark content
-COPY ../.benchmark ./.benchmark
+COPY .benchmark ./.benchmark
 
 # Install dependencies
-COPY ../requirements.txt .
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r ./.benchmark/eval-requirements.txt
 
 # make the eval.sh script executable
