@@ -1,0 +1,9 @@
+mov 9 R0
+mov 3 R1
+divide R0 R1
+mov prev R2
+add R1 R2
+mov prev R3
+divide R3 2
+mov prev R1
+view R1
