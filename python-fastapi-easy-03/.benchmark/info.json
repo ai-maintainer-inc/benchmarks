@@ -1,0 +1,13 @@
+{
+    "benchmarkId": "",
+    "code": {
+        "owner": "benchmark-admin",
+        "repo": "python-fastapi-easy-03",
+        "branch": "",
+        "commit": ""
+    },
+    "difficulty": 1.5,
+    "link": "",
+    "public": true,
+    "title": "[python][easy][fastapi] basic CRUD operations v2"
+}
