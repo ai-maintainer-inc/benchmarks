@@ -12,18 +12,19 @@ def compile_calc(filename):
 
     with open(filename, "r") as file:
         for line in file:
-            command = line.strip().split()
+            line = line.split("#")[0].strip()  # Remove comments and strip whitespace
 
-            if not command:
-                continue  # skip empty lines
+            if not line:
+                continue  # skip empty or comment-only lines
+
+            command = line.split()
 
             # Prepare the full command to call the calculator.py
             cmd = ["python", "calc.py"] + command
             result = subprocess.run(cmd, capture_output=True, text=True)
-            # print(result.stdout, end="")
-            print(result.stderr, end="")  # Add this line to print any errors
 
-            # Display the result
+            # Display the errors and results
+            print(result.stderr, end="")
             print(result.stdout, end="")
 
 

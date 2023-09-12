@@ -1,9 +1,31 @@
-mov 9 R0
+# Initial guess for 1/sqrt(2), let's take 0.7 as an example.
+mov 0.7 R0
+
+# First iteration
+# x1 = 0.5 * (x0 * (3 - 2 * x0^2))
 mov 3 R1
-divide R0 R1
-mov prev R2
-add R1 R2
-mov prev R3
-divide R3 2
-mov prev R1
-view R1
+mov 2 R2
+multiply R0 R0   # x0^2
+multiply R2 prev # 2 * x0^2
+subtract R1 prev # 3 - 2 * x0^2
+multiply R0 prev # x0 * (3 - 2 * x0^2)
+multiply prev 0.5 
+mov prev R0      # x1 is now in R0
+
+# Second iteration
+multiply R0 R0   # x1^2
+multiply R2 prev # 2 * x1^2
+subtract R1 prev # 3 - 2 * x1^2
+multiply R0 prev # x1 * (3 - 2 * x1^2)
+multiply prev 0.5 
+mov prev R0      # x2 is now in R0
+
+# Third iteration
+multiply R0 R0   # x2^2
+multiply R2 prev # 2 * x2^2
+subtract R1 prev # 3 - 2 * x2^2
+multiply R0 prev # x2 * (3 - 2 * x2^2)
+multiply prev 0.5
+mov prev R0      # x3 is now in R0, the result after 3 iterations
+
+view R0          # View the result
