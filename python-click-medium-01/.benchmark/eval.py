@@ -15,8 +15,8 @@ def run_and_check():
     if "R0 = 0.7071067811865464" in output:
         print("Test passed!")
     else:
-        print("Test failed!")
         print("Expected 'R0 = 0.7071067811865464', but didn't find it in the output.")
+        raise ValueError("Test failed!")
 
 
 if __name__ == "__main__":
