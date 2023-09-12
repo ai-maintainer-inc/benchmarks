@@ -1,0 +1,13 @@
+{
+    "benchmarkId": "",
+    "code": {
+        "owner": "benchmark-admin",
+        "repo": "python-click-medium-01",
+        "branch": "",
+        "commit": ""
+    },
+    "difficulty": 3,
+    "link": "",
+    "public": true,
+    "title": "[python][click] add persistent state for program execution"
+}

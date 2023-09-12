@@ -1,0 +1,2 @@
+Modify `calc.py` so that stateful operation are persisted.
+Currently the states ('prev', 'R0', 'R1', 'R2', 'R3') only exist in memory for the duration of the calc.py process. Instead they should be persisted to a file so that they can be loaded when the process starts, and saved when the process ends.
